@@ -1,0 +1,11 @@
+.clear-favorites-btn {
+    background: linear-gradient(35deg, #737070, #A9A29E);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.clear-favorites-btn:hover {
+    background: linear-gradient(to right, #f27121, #e94057);
+}

@@ -1,0 +1,42 @@
+.form-decoration {
+    margin: 0 10rem;
+}
+
+.form-positioning {
+    position: relative;
+    width: 100%;
+}
+
+.input-field {
+    border: none;
+    background: #A9A29E;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    outline: none;
+    width: 100%;
+    font-size: 1.2rem;
+
+}
+::placeholder {
+    color: #cccccc;
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(100%, -50%);
+    color: white;
+}
+
+
+
+@media screen and (max-width: 1015px) {
+    .form-decoration {
+        margin: 0rem 2rem 0rem 0rem;
+    }
+
+    .form-positioning {
+        margin-right: 5rem;
+    }
+}

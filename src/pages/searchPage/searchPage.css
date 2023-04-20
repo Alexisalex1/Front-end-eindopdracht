@@ -1,0 +1,22 @@
+
+.img-searchPage {
+    width: 100%;
+    height: 50%;
+    border-radius: 2rem;
+}
+
+.a-searchPage {
+    text-decoration: none;
+}
+
+.label-searchPage {
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.searchPage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 30rem));
+    grid-gap: 4rem;
+}

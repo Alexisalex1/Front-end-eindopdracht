@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Pages from "./pages/pages";
+import Category from "./components/categories/categories";
+import Searchbar from "./components/Searchbar/searchbar";
+import "./App.css"
+import { NavLink } from "react-router-dom";
+import ThemeButton from "./components/Buttons/themebutton";
+import ThemeContextProvider from "./context/themeContext";
+import "./light.css"
+import "./dark.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App () {
+
+
+    return(
+        <ThemeContextProvider>
+            <div>
+                <ThemeButton/>
+                <div className="nav-padding">
+                    <NavLink className="logo-icon" to={"/"} >
+                        Homepage
+                    </NavLink>
+                    <NavLink className="logo-icon" to={"/questions"} >
+                        Let me find you a recipe!
+                    </NavLink>
+                    <NavLink className="logo-icon" to={"/favorites"} >
+                        Favorites list
+                    </NavLink>
+                </div>
+                <Searchbar/>
+                <Category/>
+                <Pages/>
+            </div>
+        </ThemeContextProvider>
+    );
 }
-
 export default App;

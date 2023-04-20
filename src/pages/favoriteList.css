@@ -1,0 +1,5 @@
+.favorite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 30rem));
+    grid-gap: 4rem;
+}
