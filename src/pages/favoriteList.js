@@ -24,13 +24,13 @@ const FavoritesPage = () => {
                         const id = idExtract(uri);
 
                         return (
-                            <Link  to={"/recipe/" + id}>
+                            <Link className="padding" to={"/recipe/" + id}>
                                 <Card
                                     label={recipe.label}
                                     image={recipe.image }
                                 />
                             </Link>)})) :
-                    (<p>You haven't added any recipes to your favorites yet.</p>)
+                    (<p className="padding">You haven't added any recipes to your favorites yet.</p>)
                 }
             </div>
         </div>

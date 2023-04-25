@@ -1,37 +1,23 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import Pages from "./pages/pages";
-import Category from "./components/categories/categories";
-import Searchbar from "./components/Searchbar/searchbar";
 import "./App.css"
-import { NavLink } from "react-router-dom";
-import ThemeButton from "./components/Buttons/themebutton";
-import ThemeContextProvider from "./context/themeContext";
 import "./light.css"
 import "./dark.css"
-
+import {Routes, Route} from "react-router-dom";
+import Login from "./components/authenticateForm/loginForm";
+import Register from "./components/authenticateForm/registerForm";
+import PrivateRoute from "./PrivateRoute";
 function App () {
 
-
     return(
-        <ThemeContextProvider>
-            <div>
-                <ThemeButton/>
-                <div className="nav-padding">
-                    <NavLink className="logo-icon" to={"/"} >
-                        Homepage
-                    </NavLink>
-                    <NavLink className="logo-icon" to={"/questions"} >
-                        Let me find you a recipe!
-                    </NavLink>
-                    <NavLink className="logo-icon" to={"/favorites"} >
-                        Favorites list
-                    </NavLink>
-                </div>
-                <Searchbar/>
-                <Category/>
-                <Pages/>
-            </div>
-        </ThemeContextProvider>
+
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/pages" element={<PrivateRoute><Pages /></PrivateRoute>} />
+
+            </Routes>
+
     );
 }
 export default App;
