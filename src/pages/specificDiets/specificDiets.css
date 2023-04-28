@@ -1,0 +1,6 @@
+
+.diet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 2fr));
+    grid-gap: 4rem;
+}

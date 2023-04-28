@@ -1,0 +1,68 @@
+.form-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.auth-container, .login-form, .register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.label-padding{
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+.input-field-auth {
+    margin: 0.5rem 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.button-border {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+
+}
+
+.button-border:hover {
+    background-color: #999;
+}
+.status-message-error {
+    color: red;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+.status-message-success {
+    color: darkgreen;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
