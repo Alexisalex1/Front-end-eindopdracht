@@ -31,17 +31,6 @@
     color: #666;
 }
 
-.logout-button {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-}
-
-.logout-button:hover {
-    color: #666;
-}
 
 .padding-bottom {
     padding-bottom: 10rem;

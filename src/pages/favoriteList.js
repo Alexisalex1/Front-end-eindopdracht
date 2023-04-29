@@ -5,7 +5,7 @@ import idExtract from "../components/idExtract";
 import {Link} from "react-router-dom";
 import "./favoriteList.css"
 import ClearFavorites from "../components/Buttons/clearFavorites";
-import AddToFavorites from "../components/Buttons/FavoriteButton";
+
 
 
 const FavoritesPage = () => {

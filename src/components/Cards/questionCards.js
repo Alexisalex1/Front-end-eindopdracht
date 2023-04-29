@@ -13,23 +13,25 @@ const questions = [
             { id: 'balanced', text: 'okay.' },
             { id: 'comfort', text: 'Bad..' },
 
+
         ],
     },
     {
         id: 2,
         question: 'What time of day is it?',
         answers: [
-            { id: 'jemoeder', text: 'Still morning' },
+            { id: '&mealType=breakfast', text: 'Still morning' },
             { id: '&mealType=lunch', text: 'Midday!' },
             { id: '&mealType=dinner', text: 'Evening already..' },
             { id: '&mealType=snack', text: 'Inbetween day moments. I just want a snack!' }
         ],
     },
     {    id: 3,
-        question: 'Do you have a specific diet?',
+        question: 'Do you have a specific diet concerning animal products?',
         answers: [
-            { id: '&health=vegetarian', text: "I don't eat any meat." },
-            { id: '&health=vegan', text: "I don't eat anything animal related." },
+            { id: '&health=vegetarian', text: "I don't eat any meat(vega)." },
+            { id: '&health=vegan', text: "I don't eat anything animal related(vegan)."},
+            { id: '', text: "i eat everything."}, 
         ],
     },
 
@@ -64,7 +66,7 @@ function QuestionSearch() {
                         <div
                             key={answer.id}
                             className={`qsearch-answer ${
-                                answers[currentIndex] === answer ? 'qsearch-answer-selected' : ''
+                                answers[currentIndex] === answer 
                             }`}
                             onClick={() => handleToggle(answer)}
                         >

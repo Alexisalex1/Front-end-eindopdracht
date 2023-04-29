@@ -4,6 +4,7 @@ import axios from "axios";
 import "./recipes.css";
 import AddToFavorites from "../components/Buttons/FavoriteButton";
 
+{/*This function is the baseline for many other pages and components. in here the recipe out of a list of recipes wil be shown. More specifically, the details. */}
 function Recipes() {
     const { name } = useParams();
     const [details, setDetails] = useState({});
@@ -18,6 +19,7 @@ function Recipes() {
 
     ];
 
+    {/*This useEffect will call the API to retrieve the requested details. If no detail for whatever reason can be fetched, it wil set the error useState and the error will be shown instead if the recipe details.*/}
     useEffect(() => {
         async function fetchDetails() {
             try {
@@ -44,6 +46,8 @@ function Recipes() {
                 Home
             </NavLink></div>;
     }
+
+    {/*This code is the fundament for the different buttons, which will show chosen details. */}
     return (
         <div className="recipes-wrapper">
             <div className="image-container">
@@ -52,7 +56,7 @@ function Recipes() {
             </div>
             <h2 className="recipes-title">{details.label}</h2>
 
-
+            {/*This will relocate the user to the site. it will pop up a new window.*/}
             <div className="recipes-info">
                 {buttons.map(({ label, tab, href }) => (
                     href ? (
@@ -73,7 +77,7 @@ function Recipes() {
                         </button>
                     )
                 ))}
-
+                {/*This will show the nutrient in a bar-diagram. Note that I created a matchingNutrient to check if daily intake info is available and if not, it won't display it  */}
                 {activeTab === "total-nutrition" && (
                     <div className="nutrition-wrapper">
                         {details.totalDaily && Object.values(details.totalDaily).map(({ label, quantity, unit }) => {
@@ -98,7 +102,7 @@ function Recipes() {
                         })}
                     </div>
                 )}
-
+                {/*this shows the daily intake. What's so special about this part, is that is in the essence, the same as total intake, but this is divided by the yield */}
                 {activeTab === "daily-intake" && (
                     <div className="nutrition-wrapper">
                         {details.totalDaily && Object.values(details.totalDaily).map(({ label, quantity, unit }) => {
@@ -124,6 +128,7 @@ function Recipes() {
                         })}
                     </div>
                 )}
+                {/*This shows the ingredients with the image of the ingredient.*/}
                 {activeTab === "ingredients" && (
                     <ul className="recipes-ul">
                         {details.ingredients &&
