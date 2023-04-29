@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Functionality
+This application is built to be able to fetch over 2.3 million recipes and showcase that to you as a user. There are a couple of ways to fetch those recipes. it is for example possible to use the searchbar, by answering questions and by using the different buttons.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Usage
 
-## Available Scripts
+![img.png](img.png)
 
-In the project directory, you can run:
+This is a photo of the homepage of the app. This showcases the most important page of the app. The red navigation bar will be visible on any page (excluding the pre-log in pages) and; 
+1. includes going back to the homepage, 
+2. to the questions page to answer questions and getting recipes based on your answers, 
+3. to your own favorite list that you can modify to your needs
+4. the logout button to log out, 
+5. and last but not least, the theming button to give your eyes some rest.
 
-### `npm start`
+It also has some pre-built-in categories that you can choose from to fetch recipes with the most popular categories. It's ofcourse completely possible to search for whatever ingredient or name that you can think of, by using the searchbar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This application is depended on some programs and environments. I will list them here and provide the installation manual wherever one is required.
 
-### `npm test`
+### 1. Code editors
+I strongly recommend the usage of a code editor like Webstorm. it is completely possible to use Notepad, which is a default Windows program, but using a code editor like Webstorm, wil exponential improve you experience. However, Webstorm is a paid product, so free code editors such as Visual Studio Code is fine aswell.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Web browser
+To be able to use this application, it is a requirement to have a web browser like Google Chrome. You weren't able to read this without a web browser anyway, but just to be thoroughly I give it a mention.
 
-### `npm run build`
+### 3. Node.js
+To be able to run the code provided in the src directory, you will need to have installed Node.js. Node.JS is a runtime environment that makes it available to run code locally on your computer. I will now provide how to manually install Node.js: 
+1. Open a new project in any code editor.
+2. Create a new javaScript file in this project.
+3. Install Node.js via this link https://nodejs.org/en/download. You can skip this step if you already installed Node.js. To check if the installation was completed you can open the terminal and type the following command to see the version. if nothing happened, you will know that the installation was not complete amd you will need to redo this step.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `node -v`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. After successful installation, check the if npm is installed aswell by typing:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm -v`
 
-### `npm run eject`
+5. now install nodemon to make your user experience more friendly by using this: 
+### `npm istall -g nodemon`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+it should now work ....
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. Dependencies
+The following packages are required to be able to run the application. To install the packages (which is required and therefor mandatory) you will need to do the following: 
+1. open your terminal,
+2. type the following command. This will install all the packages and so that you don't have to do that manually. 
+### `npm install`
+splidejs/react-splide, 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+testing-library/jest-dom,
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+testing-library/react,
 
-## Learn More
+testing-library/user-event,
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+async,
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+axios,
 
-### Code Splitting
+params,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+prop-types,
 
-### Analyzing the Bundle Size
+react,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+react-dom,
 
-### Making a Progressive Web App
+react-icons,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+react-router-dom,
 
-### Advanced Configuration
+react-scripts,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+scripts, 
 
-### Deployment
+web-vitals.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 5. API Key and Id
+The application makes use of an API. To be able to make requests to the API (for you by just using the site and for example waiting for the recipe to render), you will need an API KEY and an API ID. The Key and ID will not be included in the Readme.md. 
 
-### `npm run build` fails to minify
+Instead, I will provide it in my Verantwoordingsdocument so that only authorized persons are permitted to use the API key and ID. It will also be present in my Broncode in de .env file. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Github version won't have a .env file. So this needs to be created. I will explain step by step how to be able to use the API and therefore my application. You can skip this step if you have access to the Broncode provided in my assignment.
+
+This step is only for the users that got this project from Github and got access to the key and ID.
+1. Navigate to the root directory of the application. In this case it will be 
+
