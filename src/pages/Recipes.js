@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import axios from "axios";
-import "./recipes.css";
+import "./Recipes.css";
 import AddToFavorites from "../components/buttons/FavoriteButton";
 
 {/*This function is the baseline for many other pages and components. in here the recipe out of a list of recipes wil be shown. More specifically, the details. */}
@@ -49,7 +49,7 @@ function Recipes() {
 
     {/*This code is the fundament for the different buttons, which will show chosen details. */}
     return (
-        <div className="recipes-wrapper">
+        <main className="recipes-wrapper">
             <div className="image-container">
                 {details.image && <img className="recipes-image" src={details.image} alt={details.label} />}
                 {details.image && <AddToFavorites recipe={details} />}
@@ -79,7 +79,7 @@ function Recipes() {
                 ))}
                 {/*This will show the nutrient in a bar-diagram. Note that I created a matchingNutrient to check if daily intake info is available and if not, it won't display it  */}
                 {activeTab === "total-nutrition" && (
-                    <div className="nutrition-wrapper">
+                    <section className="nutrition-wrapper">
                         {details.totalDaily && Object.values(details.totalDaily).map(({ label, quantity, unit }) => {
                             const matchingNutrient = details.totalNutrients && Object.values(details.totalNutrients).filter(nutrient => nutrient.label === label)[0];
                             if (!matchingNutrient) {
@@ -100,11 +100,11 @@ function Recipes() {
                                 </div>
                             );
                         })}
-                    </div>
+                    </section>
                 )}
                 {/*this shows the daily intake. What's so special about this part, is that is in the essence, the same as total intake, but this is divided by the yield */}
                 {activeTab === "daily-intake" && (
-                    <div className="nutrition-wrapper">
+                    <section className="nutrition-wrapper">
                         {details.totalDaily && Object.values(details.totalDaily).map(({ label, quantity, unit }) => {
                             const matchingNutrient = details.totalNutrients && Object.values(details.totalNutrients).filter(nutrient => nutrient.label === label)[0];
                             if (!matchingNutrient) {
@@ -114,7 +114,7 @@ function Recipes() {
                             const perServingQuantity = Math.floor(quantity / details.yield);
 
                             return (
-                                <div className="nutrition-item" key={label}>
+                                <article className="nutrition-item" key={label}>
                                     <div className="nutrition-label">
                                         {label}:
                                         <span className="nutrient-quantity"> {nutrientQuantity}{matchingNutrient.unit}</span>
@@ -123,29 +123,31 @@ function Recipes() {
                                         <div className="nutrition-fill" style={{ width: `${quantity / details.yield}%` }}></div>
                                     </div>
                                     <div className="nutrition-value">{perServingQuantity}{unit}</div>
-                                </div>
+                                </article>
                             );
                         })}
-                    </div>
+                    </section>
                 )}
                 {/*This shows the ingredients with the image of the ingredient.*/}
                 {activeTab === "ingredients" && (
-                    <ul className="recipes-ul">
-                        {details.ingredients &&
-                            details.ingredients.map((ingredient) => (
-                                <li key={ingredient.calories}>
-                                    {ingredient.image && (
-                                        <div className="ingredient-image-wrapper"> <img className="ingredient-image" src={ingredient.image} alt={ingredient.text} />
-                                        </div>)}
-                                    {ingredient.text}
+                    <section>
+                        <ul className="recipes-ul">
+                            {details.ingredients &&
+                                details.ingredients.map((ingredient) => (
+                                    <li key={ingredient.calories}>
+                                        {ingredient.image && (
+                                            <div className="ingredient-image-wrapper"> <img className="ingredient-image" src={ingredient.image} alt={ingredient.text} />
+                                            </div>)}
+                                        {ingredient.text}
 
 
-                                </li>
-                            ))}
-                    </ul>
+                                    </li>
+                                ))}
+                        </ul>
+                    </section>
                 )}
             </div>
-        </div>
+        </main>
     );
 }
 

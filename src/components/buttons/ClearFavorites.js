@@ -1,5 +1,5 @@
 import React from 'react';
-import "./clearFavorites.css"
+import "./ClearFavorites.css"
 
 {/* this is the button to clear all favorites in the favoriteList page */}
 

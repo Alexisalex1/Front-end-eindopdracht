@@ -1,10 +1,10 @@
 import {Route, Routes} from "react-router-dom";
-import LoginForm from "./forms/loginForm";
-import RegisterForm from "./forms/registerForm";
+import LoginForm from "./forms/LoginForm";
+import RegisterForm from "./forms/RegisterForm";
 import React from "react";
-import PageNotFound from "./pageNotFound";
+import PageNotFound from "./PageNotFound";
 
-
+{/*Routes all different pages to certain url links. These are the pages these are only available before authentication (before logging in)*/}
 function PublicPages() {
     return(
         <Routes>

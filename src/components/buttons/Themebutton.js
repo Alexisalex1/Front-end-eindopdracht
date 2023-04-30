@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import {TbBulbOff,TbBulb} from 'react-icons/tb'
-import {ThemeContext} from "../../context/themeContext";
-import "./themebutton.css"
+import {ThemeContext} from "../../context/ThemeContext";
+import "./Themebutton.css"
 
 
 {/* A simple button to toggle between dark- and light.css. The toggling is in the useContext; ThemeContext. This changes the icon/*/}

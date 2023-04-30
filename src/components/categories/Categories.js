@@ -2,9 +2,9 @@ import {BsEggFried} from "react-icons/bs"
 import {TbPlant2} from "react-icons/tb"
 import {FaBalanceScale} from "react-icons/fa"
 import {NavLink} from "react-router-dom";
-import "./categories.css"
+import "./Categories.css"
 
-{/*The Catergory functions sums up all the navigation links to certain Api requests. Note that each navlink goes to /diets/:type as as stated in the privatePages.js*/}
+{/*The Catergory functions sums up all the navigation links to certain Api requests. Note that each navlink goes to /diets/:type as as stated in the PrivatePages.js*/}
 
 function Category() {
     return (

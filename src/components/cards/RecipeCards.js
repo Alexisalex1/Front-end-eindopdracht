@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 
-import "./recipeCards.css";
+import "./RecipeCards.css";
 
 {/*This function displays the recipe cards it uses the three props to display */}
 function RecipeCard(props) {

@@ -1,8 +1,8 @@
 import {Route, Routes, useNavigate} from "react-router-dom";
-import LoginForm from "../../pages/forms/loginForm";
-import RegisterForm from "../../pages/forms/registerForm";
+import LoginForm from "../../pages/forms/LoginForm";
+import RegisterForm from "../../pages/forms/RegisterForm";
 import React, {useContext, useState} from "react";
-import {AuthContext} from "../../context/authContext";
+import {AuthContext} from "../../context/AuthContext";
 
 {/*this component is a button that switches between the register or login components, depending on the authForm state. */}
 

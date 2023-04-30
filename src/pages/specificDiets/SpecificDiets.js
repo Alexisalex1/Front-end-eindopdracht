@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import RecipeCard from "../../components/cards/recipeCards";
-import "./specificDiets.css";
-import idExtract from "../../components/idExtract";
+import RecipeCard from "../../components/cards/RecipeCards";
+import "./SpecificDiets.css";
+import idExtract from "../../components/IdExtract";
 import axios from "axios";
 
+{/*This function fetches recipes from an API request based on the specific diets. The diets are clickable buttons*/}
 function SpecificDiets() {
     const [diet, setDiet] = useState([]);
     const [error, setError] = useState(null);
@@ -19,11 +20,11 @@ function SpecificDiets() {
             setDiet(recipes.hits);
             setError(null);
         } catch (error) {
-            console.error(error);
-            setError("Something went wrong..");
+            setError(error.message);
         }
     };
 
+    {/*When a button is pushed, the type parameter changes. This useEffect wil call the getDiets to do another API request*/}
     useEffect(() => {
         getDiets(params.type);
     }, [params.type]);
@@ -33,8 +34,9 @@ function SpecificDiets() {
         getDiets(params.type);
     };
 
+    {/*The recipes are rendered here and the make use out of the RecipeCard component to have fewer code lines. Note that the idExtract is used here to cut the ID of the uri and is then used to send it to /recipe/:name to the Recipes.js*/}
     return (
-        <div className="diet-grid">
+        <main className="diet-grid">
             {error ? (
                 <div>
                     <p>{error}</p>
@@ -57,7 +59,7 @@ function SpecificDiets() {
                     );
                 })
             )}
-        </div>
+        </main>
     );
 }
 

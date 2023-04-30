@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import {AuthContext} from "../../context/authContext";
-import "./logoutButton.css"
+import {AuthContext} from "../../context/AuthContext";
+import "./LogoutButton.css"
 
 {/*this functions as the logout button.  just a simple button to be able to activate the logout function in authProvider so that logalstorage is cleared and user is unauthorized from specific pages*/}
 

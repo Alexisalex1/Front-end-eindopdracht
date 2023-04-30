@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useParams } from "react-router-dom";
-import "./searchPage.css";
-import idExtract from "../../components/idExtract";
+import "./SearchPage.css";
+import idExtract from "../../components/IdExtract";
 import axios from "axios";
-import RecipeCard from "../../components/cards/recipeCards";
+import RecipeCard from "../../components/cards/RecipeCards";
 
-{/*This function is responsible for renderen recipes based on the input of the user in the searchBar component. It will use the input as a query for the API request and returns the recipes.*/}
+{/*This function is responsible for rendering recipes based on the input of the user in the searchBar component. It will use the input as a query for the API request and returns the recipes.*/}
 function SearchPage() {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     const [error, setError] = useState(null);
     let params = useParams();
     const { search } = useParams();
 
-    {/*THhis asyn function sends an API get request. if there are any errors, this will be displayed*/}
+    {/*This asnc function sends an API get request. if there are any errors, this will be displayed*/}
     const FetchRecipeBySearch = async (searchedRecipes) => {
         try {
             const response = await axios.get(
@@ -22,7 +22,7 @@ function SearchPage() {
             setSearchedRecipes(recipes.hits);
             setError(null);
         } catch (error) {
-            setError("Something went wrong..");
+            setError(error.message);
         }
     };
     {/*This will make sure the function will be re-run when the query parameters change*/}
@@ -48,7 +48,7 @@ function SearchPage() {
                 </div>
             ) : searchedRecipes.length > 0 ? (
                 searchedRecipes.map((recipe) => {
-                    {/*Note that the idExtract is used here to cut the ID of the uri and is then used to send it to /recipe/:name to the recipes.js*/}
+                    {/*Note that the idExtract is used here to cut the ID of the uri and is then used to send it to /recipe/:name to the Recipes.js*/}
                     return (
                         <div key={idExtract(recipe.recipe.uri)}>
                             <Link to={"/recipe/" + idExtract(recipe.recipe.uri)}>

@@ -1,18 +1,15 @@
 import React from "react";
 import { Route,Routes } from "react-router-dom";
-import Home from "./home";
-import SpecificDiets from "./specificDiets/specificDiets";
-import SearchPage from "./searchPage/searchPage";
-import Recipes from "./recipes";
-import QuestionSearch from "../components/cards/questionCards";
-import FavoriteList from "./favoriteList";
-import PageNotFound from "./pageNotFound";
-import AfterLogin from "./afterLoginPage";
+import Home from "./Home";
+import SpecificDiets from "./specificDiets/SpecificDiets";
+import SearchPage from "./searchPage/SearchPage";
+import Recipes from "./Recipes";
+import QuestionSearch from "../components/cards/QuestionCards";
+import FavoriteList from "./FavoriteList";
+import PageNotFound from "./PageNotFound";
+import AfterLogin from "./AfterLoginPage";
 
-
-
-
-
+{/*Routes all different pages to certain url links. These are the pages these are only available once authenticated (logged in)*/}
 function PrivatePages() {
     return(
         <Routes>

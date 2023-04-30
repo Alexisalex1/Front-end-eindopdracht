@@ -1,15 +1,15 @@
 import React, { useContext} from "react";
-import PrivatePages from "./pages/privatePages";
-import Category from "./components/categories/categories";
-import Searchbar from "./components/searchbar/searchbar";
-import "./app.css"
+import PrivatePages from "./pages/PrivatePages";
+import Category from "./components/categories/Categories";
+import Searchbar from "./components/searchbar/Searchbar";
+import "./App.css"
 import {NavLink} from "react-router-dom";
-import ThemeButton from "./components/buttons/themebutton";
+import ThemeButton from "./components/buttons/Themebutton";
 import "./light.css"
 import "./dark.css"
-import { AuthContext } from "./context/authContext";
-import LogoutButton from "./components/buttons/logoutButton";
-import PublicPages from "./pages/publicPages";
+import { AuthContext } from "./context/AuthContext";
+import LogoutButton from "./components/buttons/LogoutButton";
+import PublicPages from "./pages/PublicPages";
 
 
 function App () {

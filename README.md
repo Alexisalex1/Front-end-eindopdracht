@@ -94,6 +94,7 @@ REACT_APP_API_KEY=`API key code here`
 4. Make sure you replace the `API ID code here` and the `API key code here` with the API ID and key respectively.
 5. Make sure the changes are saved.
 
+Note: you can also create your own API key and ID here : https://developer.edamam.com/edamam-docs-recipe-api. You need to make your own account, which will be explained there.
 
 ### 6. Authentication
 To use the neat tools the application provide, you need to first have an account registered. You can do this by creating an account on the register page. After you registered an account, you can log in. Be sure to provide the email a '@'. It's also mandatory to have 6 characters for your username and password or else you won't get in.  

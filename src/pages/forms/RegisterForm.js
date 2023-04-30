@@ -1,8 +1,8 @@
 import React, {useContext, useEffect, useState} from "react";
-import { AuthContext } from "../../context/authContext";
-import "./forms.css";
+import { AuthContext } from "../../context/AuthContext";
+import "./Forms.css";
 import { useNavigate} from "react-router-dom";
-import FormSwitchButton from "../../components/buttons/formSwitchButton";
+import FormSwitchButton from "../../components/buttons/FormSwitchButton";
 
 {/*This function is where the user give the username, and password input so that it can be used in the authProvider. The handleSubmit calls the register in the authProvider so that an API request can be made */}
 const RegisterForm = () => {

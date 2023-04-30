@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import {AuthContext} from "../../context/authContext";
-import "./forms.css"
-import FormSwitchButton from "../../components/buttons/formSwitchButton";
+import {AuthContext} from "../../context/AuthContext";
+import "./Forms.css"
+import FormSwitchButton from "../../components/buttons/FormSwitchButton";
 
 
 {/*This function is where the user give the username and password input so that it can be used in the authProvider. The handleSubmit calls the login in the authProvider so that an API request can be made */}
