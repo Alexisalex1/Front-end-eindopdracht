@@ -1,14 +1,12 @@
 import React from "react";
-import Vegan from "../components/Slidebars/vegan";
-import Vegetarian from "../components/Slidebars/vegetarian";
+import Picks from "../components/slidebars/veganVegaSliders";
 
 
 function Home() {
     return (
-        <div>
-            <Vegetarian/>
-            <Vegan/>
-        </div>
+        <main>
+            <Picks/>
+        </main>
     );
 }
 

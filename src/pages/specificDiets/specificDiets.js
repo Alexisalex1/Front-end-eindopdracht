@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import Card from "../../components/Cards/RecipeCards";
+import RecipeCard from "../../components/cards/recipeCards";
 import "./specificDiets.css";
 import idExtract from "../../components/idExtract";
 import axios from "axios";
@@ -51,7 +51,7 @@ function SpecificDiets() {
                     return (
                         <div key={id}>
                             <Link to={`/recipe/${id}`}>
-                                <Card id={id} label={label} image={image} />
+                                <RecipeCard id={id} label={label} image={image} />
                             </Link>
                         </div>
                     );

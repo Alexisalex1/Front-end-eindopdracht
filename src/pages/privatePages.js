@@ -4,10 +4,10 @@ import Home from "./home";
 import SpecificDiets from "./specificDiets/specificDiets";
 import SearchPage from "./searchPage/searchPage";
 import Recipes from "./recipes";
-import QuestionSearch from "../components/Cards/questionCards";
+import QuestionSearch from "../components/cards/questionCards";
 import FavoriteList from "./favoriteList";
-import PageNotFound from "./PageNotFound";
-import AfterLogin from "./AfterLoginPage";
+import PageNotFound from "./pageNotFound";
+import AfterLogin from "./afterLoginPage";
 
 
 

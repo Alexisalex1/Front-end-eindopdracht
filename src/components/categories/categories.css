@@ -1,4 +1,4 @@
-.list-icons{
+.navlink-icons{
     display: flex;
     justify-content: center;
     margin: 3rem 0rem 1rem 1.5rem;
@@ -25,6 +25,7 @@
 .navlink-decoration a:focus {
     background: linear-gradient(to right, #f27121, #e94057);
 }
+
 .iconlabel-decoration {
     color: white;
     font-size: 0.8rem;

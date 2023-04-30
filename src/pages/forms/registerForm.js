@@ -1,10 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 import { AuthContext } from "../../context/authContext";
 import "./forms.css";
-import {Link, useNavigate} from "react-router-dom";
-import FormSwitchButton from "../../components/Buttons/formSwitchButton";
+import { useNavigate} from "react-router-dom";
+import FormSwitchButton from "../../components/buttons/formSwitchButton";
 
-
+{/*This function is where the user give the username, and password input so that it can be used in the authProvider. The handleSubmit calls the register in the authProvider so that an API request can be made */}
 const RegisterForm = () => {
     const { register, status, errorMessage, isLoading } = useContext(AuthContext);
     const [email, setEmail] = useState("");
@@ -16,6 +16,7 @@ const RegisterForm = () => {
 
     const navigate = useNavigate()
 
+    {/*This is where the errors are handled. There is a part that handles error before the API request and after. Note that register is called in the else statement. it has a nested loop. The submitCount is used to re-render the error message*/}
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -40,6 +41,8 @@ const RegisterForm = () => {
 
     };
 
+    {/*If the status state changes, the useEffect will be called. If it's done, it will redirect the user to the login page.*/}
+
     useEffect(() => {
         if (status === "done" || status ===! "error") {
 
@@ -53,22 +56,22 @@ const RegisterForm = () => {
     }, [status, navigate]);
 
 
+    {/*The errors are showed here. The register form is handled here aswell with input field. */}
     return (
-
-        <div className="auth-container"> {isLoading && <div>Loading...</div>}
+        <main className="auth-container"> {isLoading && <div>Loading...</div>}
             {status === "done" && !isLoading && (
-                <div className="status-message-success">
+                <p className="status-message-success">
                     Registration successful! You will be redirected to login in a moment...
-                </div>
+                </p>
                 )}
             <form className="register-form" onSubmit={handleSubmit}>
                 {error && !isLoading && (
-                    <div
+                    <p
                         key={submitCount}
                         className="status-message-error shake"
                     >
                         {error}
-                    </div>
+                    </p>
                 )}
                 <label className="label-padding" htmlFor="email">
                     Email
@@ -108,7 +111,7 @@ const RegisterForm = () => {
                 </button>
             </form>
             <FormSwitchButton />
-        </div>
+        </main>
     );
 };
 

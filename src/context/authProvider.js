@@ -3,7 +3,8 @@ import {AuthContext} from "./authContext";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-export const AuthProvider = ({ children }) => {
+{/*This component sets up different useStates to be used in different parts in the application via useContext. */}
+function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [status, setStatus] = useState("pending");
     const [errorMessage, setErrorMessage] = useState("")
@@ -23,6 +24,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
 
+    {/*This part sens a post request to the Novi-backend API with using the 'username' and 'password' as given parameters. It updates the user state depending on if it is successful or not. it also updates the localstorage with an accesstoken and user*/}
     const login = async ( username, password) => {
         setStatus("pending");
         try {
@@ -45,12 +47,11 @@ export const AuthProvider = ({ children }) => {
             setStatus("done");
             navigate("/choice")
         } catch (error) {
-            console.log(error);
             setStatus("error");
         }
     };
-
-    const register = async (username, password, email, isLoading) => {
+    {/*This also sends a post request to the Novi-backend API with and extra parameter. It uses the username, password and email. depending on the successfulness it sets the status state to either error or done.*/}
+    const register = async (username, password, email) => {
         setLoading(true);
         try {
             const response = await axios.post(
@@ -64,18 +65,16 @@ export const AuthProvider = ({ children }) => {
                 },
             );
             setStatus("done");
-            console.log("successful registration")
             setLoading(false)
         } catch (error) {
-            console.log(error);
             setStatus("error");
             setErrorMessage(error.response.data.message)
-            console.log(error.response.data.message)
+
 
         }
     };
 
-
+    {/*This removes the user and accesstoken provided in the login call*/}
     const logout = () => {
         setUser(null);
         localStorage.removeItem("user");
@@ -83,10 +82,11 @@ export const AuthProvider = ({ children }) => {
         navigate("/login")
     };
 
+    {/*returning the values as context values makes it so the children components can make use out of it*/}
     return (
         <AuthContext.Provider value={{ user, login, logout, status, setStatus, register, errorMessage, isLoading }}>
             {children}
         </AuthContext.Provider>);
-};
+}
 
 export default AuthProvider;

@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {FaSearch} from "react-icons/fa";
 import "./searchbar.css";
 
-
+{/*This function uses the users input as a query input that is navigated to /searched/:input. This will go to the component searchPage. where it will be used to do an API request. the onsubmit calls the submitHandler*/}
 function Searchbar() {
     const [input, setInput] = useState("");
     const navigate = useNavigate();

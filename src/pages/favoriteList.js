@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import {FavoritesContext} from "../context/FavoritesContext";
-import Card from "../components/Cards/RecipeCards";
+import {FavoritesContext} from "../context/favoritesContext";
+import RecipeCard from "../components/cards/recipeCards";
 import idExtract from "../components/idExtract";
 import {Link} from "react-router-dom";
 import "./favoriteList.css"
-import ClearFavorites from "../components/Buttons/clearFavorites";
+import ClearFavorites from "../components/buttons/clearFavorites";
 
 
 
@@ -25,7 +25,7 @@ const FavoritesPage = () => {
 
                         return (
                             <Link  to={"/recipe/" + id}>
-                                <Card
+                                <RecipeCard
                                     label={recipe.label}
                                     image={recipe.image }
                                 />

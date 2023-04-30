@@ -1,6 +1,6 @@
 import {Route, Routes, useNavigate} from "react-router-dom";
 import LoginForm from "../../pages/forms/loginForm";
-import RegisterForm from "../../pages/forms/RegisterForm";
+import RegisterForm from "../../pages/forms/registerForm";
 import React, {useContext, useState} from "react";
 import {AuthContext} from "../../context/authContext";
 

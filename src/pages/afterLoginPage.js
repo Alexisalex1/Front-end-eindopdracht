@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { useNavigate } from "react-router-dom"
-import "./AfterLoginPage.css"
+import "./afterLoginPage.css"
 import {AuthContext} from "../context/authContext";
 
 function AfterLogin() {

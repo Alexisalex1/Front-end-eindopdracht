@@ -25,8 +25,13 @@
     background: transparent;
 
 }
-
 .after-login-answer:hover {
     background-color: #ccc;
 }
+
+html.dark .to-question-button{
+    color: #cccccc;
+}
+
+
 

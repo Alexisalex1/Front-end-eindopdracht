@@ -4,10 +4,10 @@ import Home from "./home";
 import SpecificDiets from "./specificDiets/specificDiets";
 import SearchPage from "./searchPage/searchPage";
 import Recipes from "./recipes";
-import QuestionSearch from "../components/Cards/questionCards";
+import QuestionSearch from "../components/cards/questionCards";
 import FavoriteList from "./favoriteList";
-import ThemeButton from "../components/Buttons/themebutton";
-import Searchbar from "../components/Searchbar/searchbar";
+import ThemeButton from "../components/buttons/themebutton";
+import Searchbar from "../components/searchbar/searchbar";
 import Category from "../components/categories/categories";
 
 function Pages() {

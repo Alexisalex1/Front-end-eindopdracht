@@ -1,8 +1,10 @@
 import React, { useState, useContext } from "react";
 import {AuthContext} from "../../context/authContext";
 import "./forms.css"
-import FormSwitchButton from "../../components/Buttons/formSwitchButton";
+import FormSwitchButton from "../../components/buttons/formSwitchButton";
 
+
+{/*This function is where the user give the username and password input so that it can be used in the authProvider. The handleSubmit calls the login in the authProvider so that an API request can be made */}
 const LoginForm = () => {
     const {login, status } = useContext(AuthContext);
     const [username, setUsername] = useState("");
@@ -13,13 +15,12 @@ const LoginForm = () => {
         login( username, password);
     };
 
+    {/*The errors are handled and showed here, depending on the status useContext. The login form is handled here aswell with input field. */}
     return (
-        <div className="auth-container">
+        <main className="auth-container">
             {status === "error" && (
                 <p className="status-message-error">Wrong Username or Password. Please try again.</p>
             )}
-
-            <div>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label
                     className="label-padding"
@@ -48,9 +49,10 @@ const LoginForm = () => {
                     type="submit">Log in</button>
 
             </form>
+
+                {/*Used to switch from loginForm to registerForm*/}
                 <FormSwitchButton/>
-            </div>
-        </div>
+        </main>
     );
 }
 export default LoginForm;

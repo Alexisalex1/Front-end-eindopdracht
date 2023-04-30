@@ -4,7 +4,7 @@ import {ThemeContext} from "../../context/themeContext";
 import "./themebutton.css"
 
 
-{/* A simple button to toggle between dark- and light.css. The toggling is in the useContext; ThemeContext */}
+{/* A simple button to toggle between dark- and light.css. The toggling is in the useContext; ThemeContext. This changes the icon/*/}
 function ThemeButton() {
     const themeContext = useContext(ThemeContext);
 

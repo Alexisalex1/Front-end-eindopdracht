@@ -30,6 +30,10 @@
     cursor: pointer;
 }
 
+html.dark .retry-button {
+    color: white;
+}
+
 .retry-button:hover {
     background-color: #999;
 }

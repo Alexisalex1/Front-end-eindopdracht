@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect} from 'react';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
-import {FavoritesContext} from "../../context/FavoritesContext";
+import {FavoritesContext} from "../../context/favoritesContext";
 import './FavoriteButton.css';
 
 {/*This creates a button in a form of a heart in the recipe page. if clicked on, it will add the recipe to the favoritesList page. This also makes use of useContext, so that it is possible to still have the list intact while the page refreshes or is rendered from a different page.*/}

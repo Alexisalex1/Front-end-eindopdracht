@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './app';
 import {BrowserRouter as Router} from "react-router-dom";
-import FavoritesContextProvider from "./context/FavoritesContext";
+import FavoritesContextProvider from "./context/favoritesContext";
 import "./dark.css"
 import "./light.css"
 import ThemeContextProvider from "./context/themeContext";

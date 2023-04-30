@@ -12,9 +12,11 @@ function LogoutButton() {
     };
 
     return (
-        <div>
-            {user}
-        <button className="logout-button" onClick={handleClick}>Logout</button>
+        <div className="logout-container">
+            <span>{user}</span>
+            <button className="logout-button" onClick={handleClick}>
+                Logout
+            </button>
         </div>
     );
 }

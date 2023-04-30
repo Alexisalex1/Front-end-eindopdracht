@@ -1,8 +1,8 @@
 import {Route, Routes} from "react-router-dom";
 import LoginForm from "./forms/loginForm";
-import RegisterForm from "./forms/RegisterForm";
+import RegisterForm from "./forms/registerForm";
 import React from "react";
-import PageNotFound from "./PageNotFound";
+import PageNotFound from "./pageNotFound";
 
 
 function PublicPages() {

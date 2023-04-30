@@ -4,10 +4,11 @@ import {FaBalanceScale} from "react-icons/fa"
 import {NavLink} from "react-router-dom";
 import "./categories.css"
 
+{/*The Catergory functions sums up all the navigation links to certain Api requests. Note that each navlink goes to /diets/:type as as stated in the privatePages.js*/}
 
 function Category() {
     return (
-        <div className="list-icons navlink-decoration">
+        <div className="navlink-icons navlink-decoration">
             <NavLink to="/diets/high-protein" >
                 <BsEggFried className="icon-decoration" />
                 <h4 className="iconlabel-decoration"> Protein Based

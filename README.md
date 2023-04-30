@@ -1,5 +1,5 @@
 # Functionality
-This application is built to be able to fetch over 2.3 million recipes and showcase that to you as a user. There are a couple of ways to fetch those recipes. it is for example possible to use the searchbar, by answering questions and by using the different buttons.
+This application is built to be able to fetch over 2.3 million recipes and showcase that to you as a user. There are a couple of ways to fetch those recipes. It is for example possible to use the searchbar, by answering questions and by using the different buttons.
 
 ### Usage
 
@@ -42,7 +42,7 @@ To be able to run the code provided in the src directory, you will need to have 
 it should now work ....
 
 ### 4. Dependencies
-The following packages are required to be able to run the application. To install the packages (which is required and therefor mandatory) you will need to do the following: 
+The following packages are required to be able to run the application. To install the packages (which is required and therefore mandatory) you will need to do the following: 
 1. open your terminal,
 2. type the following command. This will install all the packages and so that you don't have to do that manually. 
 ### `npm install`
@@ -76,13 +76,40 @@ scripts,
 
 web-vitals.
 
-### 5. API Key and Id
+### 5. API Key and ID
 The application makes use of an API. To be able to make requests to the API (for you by just using the site and for example waiting for the recipe to render), you will need an API KEY and an API ID. The Key and ID will not be included in the Readme.md. 
 
-Instead, I will provide it in my Verantwoordingsdocument so that only authorized persons are permitted to use the API key and ID. It will also be present in my Broncode in de .env file. 
+Instead, I will provide it in my Verantwoordingsdocument so that only authorized user are permitted to use the API key and ID. It will also be present in my Broncode in the .env file. 
 
 The Github version won't have a .env file. So this needs to be created. I will explain step by step how to be able to use the API and therefore my application. You can skip this step if you have access to the Broncode provided in my assignment.
 
 This step is only for the users that got this project from Github and got access to the key and ID.
-1. Navigate to the root directory of the application. In this case it will be 
+1. Navigate to the root directory of the application. In this case it will be to the directory frontendassignementedamam.
+2. Create a file named .env in the directory. Be sure it it in the root directory.
+3. Open the .env file in a code/text editor and add the following lines to the .env file:
 
+REACT_APP_API_ID=`API ID code here`
+
+REACT_APP_API_KEY=`API key code here`
+4. Make sure you replace the `API ID code here` and the `API key code here` with the API ID and key respectively.
+5. Make sure the changes are saved.
+
+
+### 6. Authentication
+To use the neat tools the application provide, you need to first have an account registered. You can do this by creating an account on the register page. After you registered an account, you can log in. Be sure to provide the email a '@'. It's also mandatory to have 6 characters for your username and password or else you won't get in.  
+
+
+# Npm commando's
+### `npm install` 
+This command installs all the dependencies specified in the package.json file. If you run this command without any arguments, it will install all the dependencies listed in the file. in 4. Dependencies, you can see which one will be installed.
+
+### `npm uninstall` <package-name>
+Will uninstall any package. Beware that the application runs on the specific packages. uninstalling one could break the applications' usage. 
+
+
+### `npm outdated` 
+This will check if there are any outdated packages. 
+
+### `npm update`
+
+npm update: This command updates all the packages in the project to the latest version.

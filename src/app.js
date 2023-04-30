@@ -1,14 +1,14 @@
 import React, { useContext} from "react";
 import PrivatePages from "./pages/privatePages";
 import Category from "./components/categories/categories";
-import Searchbar from "./components/Searchbar/searchbar";
-import "./App.css"
+import Searchbar from "./components/searchbar/searchbar";
+import "./app.css"
 import {NavLink} from "react-router-dom";
-import ThemeButton from "./components/Buttons/themebutton";
+import ThemeButton from "./components/buttons/themebutton";
 import "./light.css"
 import "./dark.css"
 import { AuthContext } from "./context/authContext";
-import LogoutButton from "./components/Buttons/logoutButton";
+import LogoutButton from "./components/buttons/logoutButton";
 import PublicPages from "./pages/publicPages";
 
 
@@ -33,8 +33,8 @@ function App () {
                             </NavLink>
                             <LogoutButton />
                         </div>
-
                     </nav>
+
                         <div className="padding-bottom">
                         <Searchbar/>
                         <Category/>

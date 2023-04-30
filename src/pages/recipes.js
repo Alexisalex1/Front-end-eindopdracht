@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import axios from "axios";
 import "./recipes.css";
-import AddToFavorites from "../components/Buttons/FavoriteButton";
+import AddToFavorites from "../components/buttons/FavoriteButton";
 
 {/*This function is the baseline for many other pages and components. in here the recipe out of a list of recipes wil be shown. More specifically, the details. */}
 function Recipes() {

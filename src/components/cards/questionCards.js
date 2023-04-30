@@ -37,6 +37,7 @@ const questions = [
 
 ];
 
+{/*This function is used to check the current question to the index of the array. This array is determined by currentIndex useState and will display the quest and answers respectively*/}
 function QuestionSearch() {
     const [answers, setAnswers] = useState({});
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,15 +52,15 @@ function QuestionSearch() {
             const searchValues = Object.values(answers).map((answer) => answer.id);
             const searchParam = searchValues.join('');
             navigate(`/searched/${searchParam}`);
-            console.log(searchParam);
         }
     }
 
     const currentQuestion = questions[currentIndex];
 
+
     return (
-        <div>
-            <div className="qsearch-question">
+        <main>
+            <article className="qsearch-question">
                 <h3>{currentQuestion.question}</h3>
                 <div className="qsearch-answers">
                     {currentQuestion.answers.map((answer) => (
@@ -74,8 +75,8 @@ function QuestionSearch() {
                         </div>
                     ))}
                 </div>
-            </div>
-        </div>
+            </article>
+        </main>
     );
 }
 
